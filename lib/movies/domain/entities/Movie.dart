@@ -5,6 +5,7 @@ class Movie {
   final List<int> genreIds;
   final String overview;
   final double voteAverage;
+  final String releaseDate;
 
   const Movie(
       this.adult,
@@ -12,7 +13,8 @@ class Movie {
       this.backDropPath,
       this.genreIds,
       this.overview,
-      this.voteAverage);
+      this.voteAverage,
+      this.releaseDate);
 
   @override
   bool operator ==(Object other) =>
@@ -24,7 +26,8 @@ class Movie {
           backDropPath == other.backDropPath &&
           genreIds == other.genreIds &&
           overview == other.overview &&
-          voteAverage == other.voteAverage;
+          voteAverage == other.voteAverage &&
+          releaseDate == other.releaseDate;
 
   @override
   int get hashCode =>
@@ -33,5 +36,6 @@ class Movie {
       backDropPath.hashCode ^
       genreIds.hashCode ^
       overview.hashCode ^
-      voteAverage.hashCode;
+      voteAverage.hashCode ^
+      releaseDate.hashCode;
 }
